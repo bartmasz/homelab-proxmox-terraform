@@ -66,6 +66,3 @@ variable "vm_template_cloud_init_servers" {
 variable "vm_template_cloud_init_username" {
   type = string
 }
-
-
-
