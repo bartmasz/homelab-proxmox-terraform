@@ -12,3 +12,10 @@ PROXMOX_VE_ENDPOINT="https://a.b.c.d:8006"
 PROXMOX_VE_USERNAME="root@pam"
 PROXMOX_VE_PASSWORD="YourRootPasswordHere"
 ```
+
+## Run
+
+```bash
+cd silverstone/
+terragrunt run-all apply
+```
