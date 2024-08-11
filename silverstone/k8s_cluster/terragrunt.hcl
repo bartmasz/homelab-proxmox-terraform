@@ -32,6 +32,7 @@ inputs = {
       cpu_limit        = 1
       cpu_units        = 100
       memory_dedicated = 2048
+      disk_size        = 16
       ipv4_address     = "10.0.0.21/24"
       startup = {
         order      = 4
@@ -47,9 +48,10 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
+      disk_size        = 32
       ipv4_address     = "10.0.0.31/24"
       startup = {
-        order      = 5
+        order      = 6
         up_delay   = 5
         down_delay = 5
       }
@@ -62,6 +64,7 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
+      disk_size        = 32
       ipv4_address     = "10.0.0.32/24"
       startup = {
         order      = 6
@@ -77,9 +80,58 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
+      disk_size        = 32
       ipv4_address     = "10.0.0.33/24"
       startup = {
-        order      = 7
+        order      = 6
+        up_delay   = 5
+        down_delay = 5
+      }
+    },
+    {
+      vm_id            = 134
+      type             = "worker"
+      hostname         = "k8s-longhorn-1"
+      cpu_cores        = 2
+      cpu_limit        = 1
+      cpu_units        = 100
+      memory_dedicated = 4096
+      disk_size        = 64
+      ipv4_address     = "10.0.0.34/24"
+      startup = {
+        order      = 5
+        up_delay   = 5
+        down_delay = 5
+      }
+    },
+    {
+      vm_id            = 135
+      type             = "worker"
+      hostname         = "k8s-longhorn-2"
+      cpu_cores        = 2
+      cpu_limit        = 1
+      cpu_units        = 100
+      memory_dedicated = 4096
+      disk_size        = 64
+      ipv4_address     = "10.0.0.35/24"
+      startup = {
+        order      = 5
+        up_delay   = 5
+        down_delay = 5
+      }
+    },
+    {
+      vm_id            = 136
+      type             = "worker"
+      hostname         = "k8s-longhorn-3"
+      cpu_cores        = 2
+      cpu_limit        = 1
+      cpu_units        = 100
+      memory_dedicated = 4096
+      disk_size        = 64
+      ipv4_address     = "10.0.0.36/24"
+      startup = {
+        order      = 5
         up_delay   = 5
         down_delay = 5
       }

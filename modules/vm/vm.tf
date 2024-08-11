@@ -34,6 +34,11 @@ resource "proxmox_virtual_environment_vm" "vm" {
     units = each.value.cpu_units
   }
 
+  disk {
+    interface = "scsi0"
+    size      = each.value.disk_size
+  }
+
   network_device {
     bridge  = "vmbr0"
     enabled = true

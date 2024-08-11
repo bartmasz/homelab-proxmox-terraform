@@ -25,6 +25,7 @@ variable "vm_definition" {
     cpu_limit        = number
     cpu_units        = number
     memory_dedicated = number
+    disk_size        = number
     hostname         = string
     ipv4_address     = string
     startup = object({
