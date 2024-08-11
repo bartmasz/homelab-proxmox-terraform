@@ -15,7 +15,7 @@ terraform {
   required_providers {
     proxmox = {
       source  = "bpg/proxmox"
-      version = "0.61.1"
+      version = "0.62.0"
     }
   }
 }
@@ -25,7 +25,7 @@ provider "proxmox" {
   ssh {
     agent = true
     username = "terraform"
-    private_key = file("~/.ssh/id_ed25519.pub")
+    private_key = file("~/.ssh/id_ed25519")
     node {
       name    = "silverstone"
       address = "10.0.0.2"
