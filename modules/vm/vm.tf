@@ -28,10 +28,11 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   cpu {
-    type  = "host"
-    cores = each.value.cpu_cores
-    limit = each.value.cpu_limit
-    units = each.value.cpu_units
+    type         = "host"
+    architecture = "x86_64"
+    cores        = each.value.cpu_cores
+    limit        = each.value.cpu_limit
+    units        = each.value.cpu_units
   }
 
   disk {
