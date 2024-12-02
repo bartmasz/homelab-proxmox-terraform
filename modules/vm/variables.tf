@@ -25,9 +25,13 @@ variable "vm_definition" {
     cpu_limit        = number
     cpu_units        = number
     memory_dedicated = number
-    disk_size        = number
-    hostname         = string
-    ipv4_address     = string
+    disks = list(object({
+      interface = string
+      format    = string
+      size      = number
+    }))
+    hostname     = string
+    ipv4_address = string
     startup = object({
       order      = number
       up_delay   = number

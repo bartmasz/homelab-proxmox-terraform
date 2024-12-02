@@ -35,9 +35,13 @@ resource "proxmox_virtual_environment_vm" "vm" {
     units        = each.value.cpu_units
   }
 
-  disk {
-    interface = "scsi0"
-    size      = each.value.disk_size
+  dynamic "disk" {
+    for_each = each.value.disks
+    content {
+      interface   = disk.value.interface
+      file_format = disk.value.format
+      size        = disk.value.size
+    }
   }
 
   network_device {
