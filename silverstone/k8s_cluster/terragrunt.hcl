@@ -32,8 +32,12 @@ inputs = {
       cpu_limit        = 1
       cpu_units        = 100
       memory_dedicated = 4096
-      disk_size        = 32
-      ipv4_address     = "10.0.0.21/24"
+      disks = [{
+        interface = "scsi0"
+        format    = "raw"
+        size      = 16
+      }]
+      ipv4_address = "10.0.0.21/24"
       startup = {
         order      = 4
         up_delay   = 10
@@ -48,8 +52,19 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
-      disk_size        = 64
-      ipv4_address     = "10.0.0.31/24"
+      disks = [
+        {
+          interface = "scsi0"
+          format    = "raw"
+          size      = 16
+        },
+        {
+          interface = "scsi1"
+          format    = "raw"
+          size      = 32
+        }
+      ]
+      ipv4_address = "10.0.0.31/24"
       startup = {
         order      = 6
         up_delay   = 5
@@ -64,8 +79,19 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
-      disk_size        = 64
-      ipv4_address     = "10.0.0.32/24"
+      disks = [
+        {
+          interface = "scsi0"
+          format    = "raw"
+          size      = 16
+        },
+        {
+          interface = "scsi1"
+          format    = "raw"
+          size      = 32
+        }
+      ]
+      ipv4_address = "10.0.0.32/24"
       startup = {
         order      = 6
         up_delay   = 5
@@ -80,8 +106,19 @@ inputs = {
       cpu_limit        = 4
       cpu_units        = 100
       memory_dedicated = 16384
-      disk_size        = 64
-      ipv4_address     = "10.0.0.33/24"
+      disks = [
+        {
+          interface = "scsi0"
+          format    = "raw"
+          size      = 16
+        },
+        {
+          interface = "scsi1"
+          format    = "raw"
+          size      = 32
+        }
+      ]
+      ipv4_address = "10.0.0.33/24"
       startup = {
         order      = 6
         up_delay   = 5
